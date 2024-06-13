@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -17,6 +18,55 @@ namespace CarLotSimulator
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
+
+            CarLot lot1 = new CarLot();
+            
+
+
+
+            Cars car1 = new Cars();
+            car1.Make = "BMW";
+            car1.Model = "X2";
+            car1.Year = 2025;
+            car1.EngineNoise = "brr";
+            car1.HonkNoise = "honk honk!";
+            car1.MakeEngineNoise(car1.EngineNoise);
+            car1.MakeHonkNoise();
+            lot1.CarList.Add(car1);
+            Console.WriteLine();
+            
+
+
+
+            Cars car2 = new Cars(2024, "Mercedes", "Fancy Model");
+            car2.MakeEngineNoise("mooooo");
+            car2.MakeHonkNoise();
+            lot1.CarList.Add(car2);
+            Console.WriteLine();
+            
+
+            List<int> list = new List<int>() { 1, 2, 3, };
+            Cars car3 = new Cars() { Make = "Ford", Model = "150", Year = 2025 };
+
+            car3.MakeEngineNoise("LOUD ENGINE");
+            car3.MakeHonkNoise();
+            lot1.CarList.Add(car3);
+            Console.WriteLine();
+            
+
+
+            foreach (Cars item in lot1.CarList)
+            {
+                Console.WriteLine($"Year: {item.Year}");
+                Console.WriteLine($"Make: {item.Make}");
+                Console.WriteLine($"Model: {item.Model}");
+            }
+
+
+
+
+
+
 
             //*************BONUS*************//
 
