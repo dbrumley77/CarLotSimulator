@@ -23,8 +23,8 @@ namespace CarLotSimulator
             
 
 
-
-            Cars car1 = new Cars();
+            //dot notation         default constructor
+            Car car1 = new Car();
             car1.Make = "BMW";
             car1.Model = "X2";
             car1.Year = 2025;
@@ -37,16 +37,18 @@ namespace CarLotSimulator
             
 
 
-
-            Cars car2 = new Cars(2024, "Mercedes", "Fancy Model");
+            //Custom Constructor
+            Car car2 = new Car(2024, "Mercedes", "Fancy Model");
             car2.MakeEngineNoise("mooooo");
             car2.MakeHonkNoise();
             lot1.CarList.Add(car2);
             Console.WriteLine();
             
 
+            //object initilzer syntax
+            //List<int> list = new List<int>() {1, 2, 3};
             List<int> list = new List<int>() { 1, 2, 3, };
-            Cars car3 = new Cars() { Make = "Ford", Model = "150", Year = 2025 };
+            Car car3 = new Car() { Make = "Ford", Model = "150", Year = 2025 };
 
             car3.MakeEngineNoise("LOUD ENGINE");
             car3.MakeHonkNoise();
@@ -55,16 +57,17 @@ namespace CarLotSimulator
             
 
 
-            foreach (Cars item in lot1.CarList)
+
+            foreach (Car item in lot1.CarList)
             {
                 Console.WriteLine($"Year: {item.Year}");
                 Console.WriteLine($"Make: {item.Make}");
                 Console.WriteLine($"Model: {item.Model}");
             }
 
-
-
-
+            Console.WriteLine();
+            
+            
 
 
 

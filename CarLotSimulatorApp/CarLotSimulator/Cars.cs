@@ -6,8 +6,24 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    class Cars
+    class Car
     {
+
+        public Car()
+        {
+            CarLot.numberOfCars++;
+            Console.WriteLine(CarLot.numberOfCars);
+        }
+        public Car(int year, string make, string model)
+        {
+            CarLot.numberOfCars++;
+            Console.WriteLine(CarLot.numberOfCars);
+            Year = year;
+            Make = make;
+            Model = model;
+        }
+
+
         public int Year { set; get; }
         public string Make { get; set; }
         public string Model { get; set; }
@@ -18,24 +34,20 @@ namespace CarLotSimulator
         public void MakeEngineNoise(string noise)
         {
             Console.WriteLine($"The {Make}'s engine noise sounds like this: {noise}");
-        }public void MakeHonkNoise()
+        }
+        public void MakeHonkNoise()
         {
             Console.WriteLine($"The {Make}'s honk noise sounds like this {HonkNoise}");
         }
 
-        public Cars()
-        {
 
-        }
-        public Cars(int year, string make, string model)
-        {
-            Year = year;
-            Make = make;
-            Model = model;
-        }
+       
+
+        
+
+
+
     }
-
-
 
  }
 

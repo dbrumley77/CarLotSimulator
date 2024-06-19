@@ -9,10 +9,19 @@ namespace CarLotSimulator
     class CarLot
     {
 
-        public List<Cars> CarList { get; set; } = new List<Cars>();
+        //static field
+        public static int numberOfCars;
+        
+        
+        
+        
+        public List<Car> CarList { get; set; } = new List<Car>();
+
+        
     }
 
-
+    
+        
 
 
 }
