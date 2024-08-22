@@ -10,7 +10,7 @@ namespace CarLotSimulator
     {
 
         //static field
-        public static int numberOfCars;
+        public static int _numberOfCars;
         
         
         

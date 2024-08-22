@@ -11,13 +11,13 @@ namespace CarLotSimulator
 
         public Car()
         {
-            CarLot.numberOfCars++;
-            Console.WriteLine(CarLot.numberOfCars);
+            CarLot._numberOfCars++;
+            Console.WriteLine(CarLot._numberOfCars);
         }
         public Car(int year, string make, string model)
         {
-            CarLot.numberOfCars++;
-            Console.WriteLine(CarLot.numberOfCars);
+            CarLot._numberOfCars++;
+            Console.WriteLine(CarLot._numberOfCars);
             Year = year;
             Make = make;
             Model = model;

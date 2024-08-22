@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CarLotSimulator
 {
@@ -20,7 +21,7 @@ namespace CarLotSimulator
             //Call each of the methods for each car
 
             CarLot lot1 = new CarLot();
-            
+
 
 
             //dot notation         default constructor
@@ -34,7 +35,8 @@ namespace CarLotSimulator
             car1.MakeHonkNoise();
             lot1.CarList.Add(car1);
             Console.WriteLine();
-            
+
+
 
 
             //Custom Constructor
@@ -43,18 +45,15 @@ namespace CarLotSimulator
             car2.MakeHonkNoise();
             lot1.CarList.Add(car2);
             Console.WriteLine();
-            
+
 
             //object initilzer syntax
-            //List<int> list = new List<int>() {1, 2, 3};
-            List<int> list = new List<int>() { 1, 2, 3, };
             Car car3 = new Car() { Make = "Ford", Model = "150", Year = 2025 };
-
             car3.MakeEngineNoise("LOUD ENGINE");
             car3.MakeHonkNoise();
             lot1.CarList.Add(car3);
             Console.WriteLine();
-            
+
 
 
 
@@ -63,11 +62,12 @@ namespace CarLotSimulator
                 Console.WriteLine($"Year: {item.Year}");
                 Console.WriteLine($"Make: {item.Make}");
                 Console.WriteLine($"Model: {item.Model}");
+                Console.WriteLine();
             }
 
             Console.WriteLine();
-            
-            
+
+
 
 
 
@@ -81,6 +81,17 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+
+
+
         }
+
+
+
+
+
+
+
     }
 }
